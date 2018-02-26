@@ -28,6 +28,8 @@ public class JoinService {
 											  joinReq.getName(),
 											  joinReq.getPassword(),
 											  new Date()));
+			
+			
 			conn.commit();
 		} catch (SQLException e) {
 			JdbcUtil.rollback(conn);

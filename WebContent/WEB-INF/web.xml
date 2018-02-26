@@ -13,12 +13,9 @@
 		validationQuery = select 1
 		minIdle = 3
 		maxTotal = 30
-		poolName = board	<!-- 프로젝트 네임 -->
+		poolName = board	
 	</param-value>
   </context-param>
-  
-  
-  
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>util.CharacterEncodingFilter</filter-class>
@@ -31,25 +28,16 @@
     <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  
-  
-  
   <servlet>
-  	<servlet-name>ControllerUsingURI</servlet-name>
-  	<servlet-class>mvc.controller.ControllerUsingURI</servlet-class><init-param>
-  	<param-name>configFile</param-name>
-  	<param-value>/WEB-INF/commandHandlerURI.properties</param-value></init-param>
+    <servlet-name>ControllerUsingURI</servlet-name>
+    <servlet-class>mvc.controller.ControllerUsingURI</servlet-class>
+    <init-param>
+      <param-name>configFile</param-name>
+      <param-value>/WEB-INF/commandHandlerURI.properties</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>ControllerUsingURI</servlet-name>
-  	<url-pattern>*.do</url-pattern>
+    <servlet-name>ControllerUsingURI</servlet-name>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
-  
-  
-  
-  
 </web-app>
